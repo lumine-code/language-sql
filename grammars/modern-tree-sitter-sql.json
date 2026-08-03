@@ -1,0 +1,17 @@
+{
+  "name": "SQL",
+  "scopeName": "source.sql",
+  "type": "modern-tree-sitter",
+  "parser": "tree-sitter-sql",
+  "injectionRegex": "^sql$",
+  "fileTypes": ["ddl", "dml", "dsql", "hql", "pgsql", "psql", "q", "sql"],
+  "comments": {
+    "start": "-- "
+  },
+  "treeSitter": {
+    "parserSource": "github:derekstride/tree-sitter-sql#851e9cb257ba7c66cc8c14214a31c44d2f1e954e",
+    "wasmBuildTool": "tree-sitter-cli#v0.26.11",
+    "grammar": "tree-sitter-sql/tree-sitter-sql.wasm",
+    "highlightsQuery": "tree-sitter-sql/highlights.scm"
+  }
+}

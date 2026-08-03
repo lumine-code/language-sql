@@ -2,6 +2,10 @@ describe("SQL grammar", () => {
   let grammar = null;
 
   beforeEach(() => {
+    // This suite tests the TextMate grammar. Once the package also ships a
+    // Tree-sitter one, grammarForScopeName returns that instead under the
+    // default setting, and every tokenizeLine assertion below would break.
+    atom.config.set("language.useTreeSitterParsers", false);
     waitsForPromise(() => atom.packages.activatePackage("language-sql"));
 
     runs(() => (grammar = atom.grammars.grammarForScopeName("source.sql")));
