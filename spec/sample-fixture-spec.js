@@ -7,12 +7,12 @@ const path = require("path");
 
 describe("SQL sample fixtures", () => {
   beforeEach(async () => {
-    await atom.packages.activatePackage("language-sql");
-    atom.config.set("language.useTreeSitterParsers", true);
+    await lumine.packages.activatePackage("language-sql");
+    lumine.config.set("language.useTreeSitterParsers", true);
   });
 
   it("parses sample.sql without error", async () => {
-    const editor = await atom.workspace.open(path.join(__dirname, "fixtures", "sample.sql"));
+    const editor = await lumine.workspace.open(path.join(__dirname, "fixtures", "sample.sql"));
     const languageMode = editor.getBuffer().getLanguageMode();
     await languageMode.ready;
 
