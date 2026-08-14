@@ -9,7 +9,7 @@ SQL language support.
 
 ## Installation
 
-To install `language-sql` search for _language-sql_ in the Install pane of the Lumine settings or run `lumine --install lumine-code/language-sql`.
+To install `language-sql` search for it in the Install pane of the Lumine settings, or run the command `lumine --install lumine-code/language-sql`.
 
 ## Contributing
 
