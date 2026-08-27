@@ -8,7 +8,7 @@ const path = require("path");
 describe("SQL sample fixtures", () => {
   beforeEach(async () => {
     await lumine.packages.activatePackage("language-sql");
-    lumine.config.set("language.useTreeSitterParsers", true);
+    lumine.config.set("editor.useTreeSitterParsers", true);
   });
 
   it("parses sample.sql without error", async () => {

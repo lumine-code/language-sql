@@ -5,7 +5,7 @@ describe("SQL grammar", () => {
     // This suite tests the TextMate grammar. Once the package also ships a
     // Tree-sitter one, grammarForScopeName returns that instead under the
     // default setting, and every tokenizeLine assertion below would break.
-    lumine.config.set("language.useTreeSitterParsers", false);
+    lumine.config.set("editor.useTreeSitterParsers", false);
     await lumine.packages.activatePackage("language-sql");
 
     grammar = lumine.grammars.grammarForScopeName("source.sql");

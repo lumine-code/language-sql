@@ -1,6 +1,6 @@
 {
   ".source.sql": {
-    "language": {
+    "editor": {
       "commentStart": "-- ",
       "commentDelimiters": {
         "line": "--"
