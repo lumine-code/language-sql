@@ -4,7 +4,7 @@ SQL language support.
 
 ## Features
 
-- **Grammars**: provides Tree-sitter grammars built from [tree-sitter-sql](https://github.com/derekstride/tree-sitter-sql) and TextMate grammars derived from [atom/language-sql](https://github.com/atom/language-sql).
+- **Grammars**: provides a Tree-sitter grammar built from [tree-sitter-sql](https://github.com/derekstride/tree-sitter-sql).
 - **Syntax highlighting**: full grammar coverage for SQL files.
 
 ## Installation
