@@ -31,7 +31,8 @@
     parameter: [(literal)]?)))
 
 (literal) @string.quoted.double.sql
-(comment) @comment.line.sql @_IGNORE_.spell
+((comment) @comment.line.sql @_IGNORE_.spell
+  (#set! adjust.endBeforeFirstMatchOf "\\r?$"))
 (marginalia) @comment.line.sql
 
 ((literal) @constant.numeric.sql
