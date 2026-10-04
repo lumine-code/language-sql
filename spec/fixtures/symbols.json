@@ -1,0 +1,40 @@
+{
+  "source.sql": {
+    "text": "CREATE SCHEMA demo;\nCREATE TABLE demo.people (id INTEGER, name TEXT);\nCREATE VIEW demo.names AS SELECT name FROM demo.people;\nCREATE INDEX people_idx ON demo.people(id);\nCREATE TYPE mood AS ENUM ('happy', 'sad');\nCREATE FUNCTION greet() RETURNS INTEGER AS $$ SELECT 1; $$ LANGUAGE SQL;\nCREATE PROCEDURE reset() LANGUAGE SQL AS $$ SELECT 1; $$;\nSELECT greet(), name FROM demo.people;\n-- CREATE TABLE Phantom(id INTEGER);\n",
+    "symbols": [
+      {
+        "name": "demo",
+        "tag": "module"
+      },
+      {
+        "name": "demo.people",
+        "tag": "table"
+      },
+      {
+        "name": "id",
+        "tag": "field"
+      },
+      {
+        "name": "demo.names",
+        "tag": "view"
+      },
+      {
+        "name": "people_idx",
+        "tag": "constant"
+      },
+      {
+        "name": "mood",
+        "tag": "type"
+      },
+      {
+        "name": "greet",
+        "tag": "function"
+      },
+      {
+        "name": "reset",
+        "tag": "function"
+      }
+    ],
+    "absent": ["Phantom", "SQL"]
+  }
+}

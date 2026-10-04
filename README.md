@@ -5,6 +5,7 @@ SQL language support.
 ## Features
 
 - **Grammars**: provides a Tree-sitter grammar built from [tree-sitter-sql](https://github.com/derekstride/tree-sitter-sql).
+- **Symbols**: schemas, tables, views, columns, indexes, types and routines.
 - **Syntax highlighting**: full grammar coverage for SQL files.
 
 ## Installation
