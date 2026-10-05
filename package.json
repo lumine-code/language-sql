@@ -25,6 +25,10 @@
   "bugs": {
     "url": "https://github.com/lumine-code/language-sql/issues"
   },
+  "specPackages": [
+    "language-ruby",
+    "language-ruby-on-rails"
+  ],
   "scripts": {
     "test": "lumine --test spec",
     "lint": "eslint . --max-warnings 0",

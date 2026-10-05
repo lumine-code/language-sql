@@ -1,4 +1,10 @@
 const path = require("path");
+const fs = require("fs");
+
+const packagePath = (name) => {
+  const sibling = path.resolve(__dirname, "..", "..", name);
+  return fs.existsSync(sibling) ? sibling : name;
+};
 const fixtures = require("./fixtures/symbols.json");
 
 describe("language-sql buffer symbol queries", () => {
@@ -112,10 +118,8 @@ describe("language-sql buffer symbol queries", () => {
     });
   }
   it("exposes SQL definitions inside a SQL ERB buffer at host positions", async () => {
-    await lumine.packages.activatePackage(path.resolve(__dirname, "..", "..", "language-ruby"));
-    await lumine.packages.activatePackage(
-      path.resolve(__dirname, "..", "..", "language-ruby-on-rails"),
-    );
+    await lumine.packages.activatePackage(packagePath("language-ruby"));
+    await lumine.packages.activatePackage(packagePath("language-ruby-on-rails"));
     editor = await lumine.workspace.open();
     editor.setGrammar(lumine.grammars.grammarForScopeName("source.sql.ruby"));
     editor.setText("-- migration\nCREATE TABLE people (id INTEGER);\n<% helper = 1 %>\n");
