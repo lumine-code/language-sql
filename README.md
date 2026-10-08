@@ -2,6 +2,8 @@
 
 SQL language support.
 
+Fork of [pulsar-edit/pulsar](https://github.com/pulsar-edit/pulsar) (`packages/language-sql`).
+
 ## Features
 
 - **Grammars**: provides a Tree-sitter grammar built from [tree-sitter-sql](https://github.com/derekstride/tree-sitter-sql).
