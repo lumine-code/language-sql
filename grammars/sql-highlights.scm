@@ -36,10 +36,10 @@
 (marginalia) @comment.line.sql
 
 ((literal) @constant.numeric.sql
-   (#match? @constant.numeric.sql "^[-+]?%d+$"))
+   (#match? @constant.numeric.sql "^[-+]?[0-9]+$"))
 
 ((literal) @constant.numeric.float.sql
-  (#match? @constant.numeric.float.sql "^[-+]?%d*\.%d*$"))
+  (#match? @constant.numeric.float.sql "^[-+]?[0-9]*\\.[0-9]*$"))
 
 (parameter) @variable.parameter.sql
 
