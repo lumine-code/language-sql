@@ -1,0 +1,16 @@
+{
+  "title": "language-sql",
+  "description": "SQL syntax highlighting in the editor.",
+  "recordedOn": "2026-10-13",
+  "sourceRevision": "0c40574b08a1614127f73f40dd6dd2897cf36c37",
+  "mode": "normal",
+  "fontSettings": "default",
+  "images": [
+    {
+      "file": "demo.png",
+      "label": "SQL syntax highlighting at the default editor font size.",
+      "width": 1100,
+      "height": 820
+    }
+  ]
+}

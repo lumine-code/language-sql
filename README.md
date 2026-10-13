@@ -10,6 +10,8 @@ Fork of [pulsar-edit/pulsar](https://github.com/pulsar-edit/pulsar) (`packages/l
 - **Symbols**: schemas, tables, views, columns, indexes, types and routines.
 - **Syntax highlighting**: full grammar coverage for SQL files.
 
+![SQL syntax highlighting at the default editor font size.](.github/demo.png)
+
 ## Installation
 
 To install `language-sql` search for it in the Install pane of the Lumine settings, or run the command `lumine --install lumine-code/language-sql`.
