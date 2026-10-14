@@ -1,16 +1,61 @@
 {
   "title": "language-sql",
-  "description": "SQL syntax highlighting in the editor.",
-  "recordedOn": "2026-10-13",
-  "sourceRevision": "0c40574b08a1614127f73f40dd6dd2897cf36c37",
+  "description": "SQL syntax highlighting at the default editor font size.",
+  "recordedOn": "2026-10-14",
+  "sourceRevision": "5928f9859435c78ec50ce9034f9d0f217d114d85",
+  "themeSourceRevision": "14a69683b0e3238e2bc128fbfae3866c1e4ee9c6",
   "mode": "normal",
   "fontSettings": "default",
+  "scenario": "demo.js",
+  "recipeHash": "210437cb7f7d939021b6e29748023bc06b13e5b9a1a6e5110ca984257312c5e6",
+  "environment": {
+    "platform": "win32",
+    "arch": "x64",
+    "electron": "44.7.0",
+    "chrome": "152.0.7977.130",
+    "devicePixelRatio": 1,
+    "locale": "en-GB",
+    "fontFamily": "Fira Code, Menlo, DejaVu Sans Mono, Consolas, monospace",
+    "fontSize": 14,
+    "themes": ["one-day-syntax", "one-day-ui"]
+  },
+  "viewport": { "width": 1100, "height": 820 },
+  "cornerRadius": 10,
+  "sources": {
+    "editor": {
+      "revision": "0362a9fac7d6e153a768c0381800d6f3eb06647a",
+      "dirty": true,
+      "workingTreeHash": "1d75658a8b7d55a69c806a3786c562863bb9d5c71cbf96b3084c6a78c0d648b4"
+    },
+    "package": {
+      "revision": "5928f9859435c78ec50ce9034f9d0f217d114d85",
+      "dirty": true,
+      "workingTreeHash": "11a7c04665c5ecbe1197ffac71993d8b8082d29671112e946346c0029b2964aa"
+    },
+    "language-sql": {
+      "revision": "5928f9859435c78ec50ce9034f9d0f217d114d85",
+      "dirty": true,
+      "workingTreeHash": "11a7c04665c5ecbe1197ffac71993d8b8082d29671112e946346c0029b2964aa"
+    },
+    "one-theme": {
+      "revision": "14a69683b0e3238e2bc128fbfae3866c1e4ee9c6",
+      "dirty": true,
+      "workingTreeHash": "50ec2f83a6347dd8113870992ec4eb2be4014f3d9e12213c2f51b543f1eca793"
+    }
+  },
+  "fixtures": [
+    {
+      "file": "example.sql",
+      "sha256": "6a9cb06bbe433c81f1123e6e0f5797d73f6895c4717c6c475ce4150bd9e96ac4"
+    }
+  ],
   "images": [
     {
       "file": "demo.png",
       "label": "SQL syntax highlighting at the default editor font size.",
       "width": 1100,
-      "height": 820
+      "height": 820,
+      "sha256": "6ceefef6c6c9c7e84ea829773cd60d987420a9bd5f2e2663c37eb1381fa774f6"
     }
   ]
 }
