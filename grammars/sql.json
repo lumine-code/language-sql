@@ -9,7 +9,7 @@
     "start": "-- "
   },
   "treeSitter": {
-    "parserSource": "github:derekstride/tree-sitter-sql#97614d051eebfd3bc5d97c0bdb5a1638719ca811",
+    "parserSource": "github:derekstride/tree-sitter-sql#987a64a7b105e267b39725a81ad2db628dc3178c",
     "wasmBuildTool": "tree-sitter-cli#v0.27.0",
     "grammar": "sql.wasm",
     "tagsQuery": "sql-tags.scm",

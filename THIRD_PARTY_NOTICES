@@ -67,7 +67,8 @@ suitability for any purpose.
 
 ----- BEGIN THIRD-PARTY LICENSE: parser:derekstride_tree-sitter-sql -----
 Source: https://github.com/derekstride/tree-sitter-sql
-Revision: 97614d051eebfd3bc5d97c0bdb5a1638719ca811
+Commit: 987a64a7b105e267b39725a81ad2db628dc3178c
+Ref: 987a64a7b105e267b39725a81ad2db628dc3178c
 
 Original file: LICENSE
 
