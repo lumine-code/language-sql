@@ -10,7 +10,7 @@
   },
   "treeSitter": {
     "parserSource": "github:derekstride/tree-sitter-sql#987a64a7b105e267b39725a81ad2db628dc3178c",
-    "wasmBuildTool": "tree-sitter-cli#v0.27.0",
+    "wasmBuildTool": "tree-sitter-cli#v0.27.1",
     "grammar": "sql.wasm",
     "tagsQuery": "sql-tags.scm",
     "highlightsQuery": "sql-highlights.scm"
