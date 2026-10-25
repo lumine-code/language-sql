@@ -33,7 +33,7 @@
 (literal) @string.quoted.double.sql
 ((comment) @comment.line.sql @_IGNORE_.spell
   (#set! adjust.endBeforeFirstMatchOf "\\r?$"))
-(marginalia) @comment.line.sql
+(marginalia) @comment.block.sql
 
 ((literal) @constant.numeric.sql
    (#match? @constant.numeric.sql "^[-+]?[0-9]+$"))
