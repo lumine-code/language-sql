@@ -13,6 +13,7 @@
     "wasmBuildTool": "tree-sitter-cli#v0.27.1",
     "grammar": "sql.wasm",
     "tagsQuery": "sql-tags.scm",
-    "highlightsQuery": "sql-highlights.scm"
+    "highlightsQuery": "sql-highlights.scm",
+    "indentsQuery": "sql-indents.scm"
   }
 }
