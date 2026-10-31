@@ -28,7 +28,8 @@
   },
   "specPackages": [
     "language-ruby",
-    "language-ruby-on-rails"
+    "language-ruby-on-rails",
+    "language-source"
   ],
   "scripts": {
     "test": "lumine --test spec",

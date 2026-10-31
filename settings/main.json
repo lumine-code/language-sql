@@ -3,7 +3,8 @@
     "editor": {
       "commentStart": "-- ",
       "commentDelimiters": {
-        "line": "--"
+        "line": "--",
+        "block": ["/*", "*/"]
       }
     }
   }
