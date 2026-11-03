@@ -16,6 +16,24 @@ describe("SQL upstream syntax regressions", () => {
     return root;
   }
 
+  for (const operation of ["UNION", "EXCEPT", "INTERSECT"]) {
+    for (const modifier of ["ALL", "DISTINCT"]) {
+      it(`parses ${operation} ${modifier} with both keyword scopes`, async () => {
+        const text = `SELECT 1 ${operation} ${modifier} SELECT 2;\n`;
+        const root = await parse(text);
+        expect(root.descendantsOfType("set_operation").length).toBe(1);
+        for (const [keyword, scope] of [
+          [operation, "keyword.operator.word.sql"],
+          [modifier, "keyword.control.sql"],
+        ]) {
+          expect(
+            editor.scopeDescriptorForBufferPosition([0, text.indexOf(keyword)]).getScopesArray(),
+          ).toContain(scope);
+        }
+      });
+    }
+  }
+
   it("parses table grants and revokes with keyword scopes", async () => {
     await parse(
       "GRANT SELECT ON TABLE public.items TO reader;\nREVOKE SELECT ON TABLE public.items FROM reader;\n",
