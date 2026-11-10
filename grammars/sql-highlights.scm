@@ -19,10 +19,25 @@
 (relation
   alias: (identifier) @variable.other.sql)
 
+(pivot
+  alias: (identifier) @variable.other.sql)
+
+(unpivot
+  alias: (identifier) @variable.other.sql)
+
 (field
   name: (identifier) @variable.other.member.sql)
 
+(path_expression
+  key: (identifier) @variable.other.member.sql)
+
 (term
+  alias: (identifier) @variable.other.sql)
+
+(rename_columns
+  name: (identifier) @variable.other.member.sql)
+
+(rename_columns
   alias: (identifier) @variable.other.sql)
 
 ((term
@@ -42,6 +57,9 @@
   (#match? @constant.numeric.float.sql "^[-+]?[0-9]*\\.[0-9]*$"))
 
 (parameter) @variable.parameter.sql
+
+(named_argument
+  name: (identifier) @variable.parameter.sql)
 
 [
  (keyword_true)
@@ -141,8 +159,12 @@
   (keyword_group)
   (keyword_with)
   (keyword_without)
+  (keyword_within)
   (keyword_as)
   (keyword_having)
+  (keyword_qualify)
+  (keyword_pivot)
+  (keyword_unpivot)
   (keyword_limit)
   (keyword_offset)
   (keyword_table)
@@ -355,6 +377,7 @@
  (keyword_high_priority)
  (keyword_low_priority)
  (keyword_ignore)
+ (keyword_respect)
  (keyword_nothing)
  (keyword_check)
  (keyword_option)
@@ -446,6 +469,7 @@
   "%"
   "^"
   ":="
+  "=>"
   "="
   "<"
   "<="

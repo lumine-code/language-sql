@@ -1,0 +1,152 @@
+[
+  {
+    "name": "current timestamp precision and update clause",
+    "text": "CREATE TABLE t (created DATETIME(6) DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6));\n"
+  },
+  {
+    "name": "SQLite autoincrement and nonbinary CHECK",
+    "text": "CREATE TABLE t (id INTEGER PRIMARY KEY AUTOINCREMENT, value INTEGER CHECK (abs(value)));\n"
+  },
+  {
+    "name": "group and order by all",
+    "text": "SELECT a, count(*) FROM t GROUP BY ALL ORDER BY ALL DESC;\n"
+  },
+  {
+    "name": "qualify clause",
+    "text": "SELECT row_number() OVER (ORDER BY id) AS rn FROM t QUALIFY rn = 1;\n",
+    "types": {
+      "qualify": 1
+    },
+    "scopes": [
+      {
+        "needle": "QUALIFY",
+        "contains": "keyword.control.sql"
+      }
+    ]
+  },
+  {
+    "name": "ordered aggregate and null treatment",
+    "text": "SELECT percentile_cont(0.5) WITHIN GROUP (ORDER BY value), first_value(value) IGNORE NULLS OVER (ORDER BY id) FROM t;\n",
+    "types": {
+      "ordered_set_aggregate": 1,
+      "null_treatment": 1
+    },
+    "scopes": [
+      {
+        "needle": "WITHIN",
+        "contains": "keyword.control.sql"
+      }
+    ]
+  },
+  {
+    "name": "pivot",
+    "text": "SELECT * FROM sales PIVOT (sum(amount) FOR quarter IN (1, 2));\n",
+    "types": {
+      "pivot": 1
+    },
+    "scopes": [
+      {
+        "needle": "PIVOT",
+        "contains": "keyword.control.sql"
+      }
+    ]
+  },
+  {
+    "name": "unpivot",
+    "text": "SELECT * FROM sales UNPIVOT (amount FOR quarter IN (q1, q2));\n",
+    "types": {
+      "unpivot": 1
+    },
+    "scopes": [
+      {
+        "needle": "UNPIVOT",
+        "contains": "keyword.control.sql"
+      }
+    ]
+  },
+  {
+    "name": "natural join needs no condition",
+    "text": "SELECT * FROM a NATURAL LEFT JOIN b;\n",
+    "types": {
+      "join": 1
+    }
+  },
+  {
+    "name": "NUMBER uses the numeric type node rather than a generic name",
+    "text": "CREATE TABLE t (value NUMBER);\n",
+    "types": {
+      "keyword_numeric": 1
+    },
+    "scopes": [
+      {
+        "needle": "NUMBER",
+        "contains": "support.type.builtin.sql"
+      }
+    ]
+  },
+  {
+    "name": "named argument and unary expression",
+    "text": "SELECT f(value => -(a + 1)) FROM t;\n",
+    "types": {
+      "named_argument": 1,
+      "unary_expression": 1
+    },
+    "scopes": [
+      {
+        "needle": "value",
+        "contains": "variable.parameter.sql"
+      },
+      {
+        "needle": "=>",
+        "contains": "keyword.operator.sql"
+      }
+    ]
+  },
+  {
+    "name": "lateral FROM item",
+    "text": "SELECT * FROM t, LATERAL f(t.id) AS x;\n"
+  },
+  {
+    "name": "star exclusion and renaming",
+    "text": "SELECT * EXCLUDE secret RENAME value AS amount FROM t;\n",
+    "types": {
+      "exclude_columns": 1,
+      "rename_columns": 1
+    },
+    "scopes": [
+      {
+        "needle": "value",
+        "contains": "variable.other.member.sql"
+      },
+      {
+        "needle": "amount",
+        "contains": "variable.other.sql"
+      }
+    ]
+  },
+  {
+    "name": "semi structured colon path",
+    "text": "SELECT v:a:b[0]:c::INT, arr[a:b]\nFROM t;\n",
+    "types": {
+      "path_expression": 3
+    },
+    "scopes": [
+      {
+        "needle": ":a",
+        "offset": 1,
+        "contains": "variable.other.member.sql"
+      }
+    ]
+  },
+  {
+    "name": "unparenthesized VALUES in FROM",
+    "text": "SELECT * FROM VALUES (1), (2) AS t(value);\n",
+    "types": {
+      "values": 1
+    }
+  },
+  {
+    "name": "LIKE escape clause",
+    "text": "SELECT * FROM t WHERE value LIKE 'a!_%' ESCAPE '!';\n"
+  }
+]

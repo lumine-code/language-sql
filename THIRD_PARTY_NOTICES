@@ -73,6 +73,9 @@ Ref: 49a4357df5e89832c2d2808074e6c22a1ad7d857
 Parser source: github:derekstride/tree-sitter-sql#49a4357df5e89832c2d2808074e6c22a1ad7d857
 Resolved commit: 49a4357df5e89832c2d2808074e6c22a1ad7d857
 
+Parser source: github:derekstride/tree-sitter-sql#4cd7224bfcf1fee23227c4d626760341c9b26772
+Resolved commit: 4cd7224bfcf1fee23227c4d626760341c9b26772
+
 Original file: LICENSE
 
 MIT License
