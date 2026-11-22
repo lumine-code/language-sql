@@ -12,6 +12,7 @@
     "parserSource": "github:derekstride/tree-sitter-sql#4cd7224bfcf1fee23227c4d626760341c9b26772",
     "wasmBuildTool": "tree-sitter-cli#v0.27.2",
     "grammar": "sql.wasm",
+    "tagsQuerySupportsLocalPath": true,
     "tagsQuery": "sql-tags.scm",
     "highlightsQuery": "sql-highlights.scm",
     "indentsQuery": "sql-indents.scm"
